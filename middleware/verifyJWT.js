@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const verifyJWT = (req, res, next) => {
     const authHeader = req.headers.authorization || req.headers.Authorization; // just in case the property authorization starts with capital letter
-    if (!authHeader?.startsWith('Bearer ')) return res.sendStatus(401); // unauthorized
+    if (!authHeader?.startsWith('Bearer ')) return res.sendStatus(501); // unauthorized
     console.log('[This log is from verifyJWT ]',authHeader); // we'll see a line that looks like "Bearer token"
     const token = authHeader.split(' ')[1]; // the token would be the second "word" inside the string
     jwt.verify(

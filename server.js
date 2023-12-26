@@ -105,8 +105,8 @@ app.use(function (err, req, res, next) {
 
 // instead of "on" because we are listening for this event one time, 'open' is the event we are listening for, it is emitted once the the mongoDB is successfully connected
 mongoose.connection.once('connected', () => {
-    // console.log('Connected to MongoDB');
-    console.log(`server running on port ${PORT}`);
+    console.log(`server running oasdasdn port ${PORT}`);
+    console.log('Connected to MongoDB');
     app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 });
 

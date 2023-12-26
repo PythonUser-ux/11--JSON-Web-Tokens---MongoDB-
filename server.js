@@ -108,6 +108,3 @@ app.use(function (err, req, res, next) {
     // console.log('Connected to MongoDB');
     // app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 // });
-
-// Export the Express API
-module.exports = app

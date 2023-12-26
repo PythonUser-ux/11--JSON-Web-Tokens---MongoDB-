@@ -108,6 +108,3 @@ mongoose.connection.once('connected', () => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 });
-
-// Export the Express API
-module.exports = app

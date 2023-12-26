@@ -1,7 +1,7 @@
 // a middleware is really anything between the request and the response
 // there are three types of middlewares: built-in, customed and third-parties
 
-//P.S. remember the waterfall logic for router handlers!
+// always remember the waterfall logic for router handlers!
 
 const path = require('path');
 const express = require('express');
@@ -108,3 +108,5 @@ mongoose.connection.once('connected', () => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 });
+
+export default app;

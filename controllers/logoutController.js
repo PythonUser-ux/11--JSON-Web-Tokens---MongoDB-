@@ -36,7 +36,6 @@ const handleLogout = async (req, res) => {
 
     res.clearCookie('jwt', {httpOnly: true});  // at production we need to add "secure: true" so that we only serve on https
     res.status(204).json({"message" : "you have been logged out"});
-
 }
 
 module.exports= { handleLogout }

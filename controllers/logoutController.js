@@ -11,6 +11,7 @@ const User = require('../model/User');
 const handleLogout = async (req, res) => {
     // also delete the accessToken
 
+    return res.sendStatus(230);
     const cookies = req.cookies;
 
     if(!cookies?.jwt) return res.sendStatus(204); // In this case it's okay: "No content"

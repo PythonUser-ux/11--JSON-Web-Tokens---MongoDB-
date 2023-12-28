@@ -41,7 +41,7 @@ const handleLogin = async (req, res) =>{
         //     JSON.stringify(userDB.users)
         // );
         // now we want to save the refresh token in a database so that in the future we can create a log out route to invalidate it
-        res.cookie('jwt', refreshToken, {httpOnly:true, secure:false, maxAge: 24 * 60 * 60 * 1000, sameSite:'None'}); // httpOnly cookies are not accessible using JavaScript from client-side, i.e. using console.log(document.cookie);, maxAge is the lifespan of the cookie: 24 * 60 * 60 * 100 -> 1d, when switching from Thunder Client to Chrome also switch from secure:false -> secure:true
+        res.cookie('jwt', refreshToken, {httpOnly:true, secure:true, maxAge: 24 * 60 * 60 * 1000, sameSite:'None'}); // httpOnly cookies are not accessible using JavaScript from client-side, i.e. using console.log(document.cookie);, maxAge is the lifespan of the cookie: 24 * 60 * 60 * 100 -> 1d, when switching from Thunder Client to Chrome also switch from secure:false -> secure:true
         res.json({accessToken}); // we want to store this token in memory, the local storage is not safe enough as everything JavaScript can access can be accessed by hackers
     } else {
         res.sendStatus(401); // unauthorized

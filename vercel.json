@@ -11,9 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "dev": {
-    "port": 3500,
-    "command": "npm run dev"
-  }
+  ]
 }

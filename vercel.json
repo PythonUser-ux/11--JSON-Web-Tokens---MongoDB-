@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "hhh.js",
+      "src": "server.js",
       "use": "@now/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "hhh.js"
+      "dest": "server.js"
     }
-  ]
+  ],
+  "dev": {
+    "port": 3500, // Adjust the port number if needed
+    "command": "npm run dev"
+  }
 }

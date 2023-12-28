@@ -13,7 +13,7 @@
     }
   ],
   "dev": {
-    "port": 3500, // Adjust the port number if needed
+    "port": 3500,
     "command": "npm run dev"
   }
 }

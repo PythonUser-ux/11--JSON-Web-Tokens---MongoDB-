@@ -16,7 +16,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 4000;
 
 // Connect to mongoDB, if this part fails we don't want to listen for any other connections
 connectDB(); //now it is ready to connect

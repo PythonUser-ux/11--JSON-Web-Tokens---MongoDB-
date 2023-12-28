@@ -14,6 +14,8 @@ const handleLogout = async (req, res) => {
     const cookies = req.cookies;
 
     if(!cookies?.jwt) return res.sendStatus(204); // In this case it's okay: "No content"
+
+    return res.sendStatus(230);
     const refreshToken = cookies.jwt;
 
     // const existUser = userDB.users.find(usr => usr.refreshToken === refreshToken);
